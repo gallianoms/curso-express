@@ -1,0 +1,36 @@
+GET http://localhost:3000/movies
+
+### 
+
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### 
+
+GET http://localhost:3000/movies?genre=Action
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Star Wars: Episode IV - A New Hope",
+  "year": 1977,
+  "director": "George Lucas",
+  "duration": 121,
+  "poster": "https://m.media-amazon.com/images/I/81aA7hEEykL._AC_UF1000,1000_QL80_.jpg",
+  "genre": ["Adventure", "Action", "Fantasy", "Sci-Fi"]
+}
+
+###
+
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 2000
+}
+
+###
+
+DELETE http://localhost:3000/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
